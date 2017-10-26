@@ -2,13 +2,13 @@ package cn.huashantech.liaoliao2.test.chapter7;
 
 import android.animation.ObjectAnimator;
 import android.app.Activity;
-import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.Button;
 
 import cn.huashantech.liaoliao2.R;
+import cn.huashantech.liaoliao2.test.logoff.LoginOff;
 import cn.huashantech.liaoliao2.widget.ViewWrapper;
 
 /**
@@ -37,7 +37,7 @@ public class TestActivity extends Activity{
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                performAnimate();
+                LoginOff.forceOff();
             }
         });
 

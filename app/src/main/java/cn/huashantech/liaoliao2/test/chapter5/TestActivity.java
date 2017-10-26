@@ -31,6 +31,8 @@ public class TestActivity extends Activity {
         Notification notification=new Notification();
         notification.tickerText="hello world";
         notification.when=System.currentTimeMillis();
+        long[] vibrates={0,20000};
+        notification.vibrate=vibrates;
         notification.flags=Notification.FLAG_AUTO_CANCEL;
         notification.icon= R.drawable.icon_back;
         Intent intent=new Intent(this, LogInActivity.class);

@@ -26,6 +26,7 @@ public class LiaoLiaoApplication extends Application{
     public void onCreate() {
         super.onCreate();
         instance=this;
+        registerActivityLifecycleCallbacks(activityLifecycleCallbacks);
     }
 
     public static LiaoLiaoApplication getInstance(){
