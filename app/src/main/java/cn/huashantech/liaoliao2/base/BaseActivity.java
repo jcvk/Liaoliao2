@@ -24,7 +24,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected ProgressDialog progressDialog;
 
     //头部布局
-    private ImageView mbackImage;
+    private ImageView mBackImage;
     private TextView mTitle;
     private TextView mSubTitle;
 
@@ -33,7 +33,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         int layId = getContentLayoutId();
-        mbackImage=(ImageView)findViewById(R.id.img_tool_bar_back);
+        mBackImage =(ImageView)findViewById(R.id.img_tool_bar_back);
         mTitle=(TextView)findViewById(R.id.tv_tool_bar_title);
         mSubTitle=(TextView)findViewById(R.id.tv_tool_bar_subtitle);
         setContentView(layId);
@@ -120,9 +120,9 @@ public abstract class BaseActivity extends AppCompatActivity {
      */
     protected void setBackImageShow(boolean isShow){
         if (isShow){
-            mbackImage.setVisibility(View.VISIBLE);
+            mBackImage.setVisibility(View.VISIBLE);
         }else {
-            mbackImage.setVisibility(View.GONE);
+            mBackImage.setVisibility(View.GONE);
         }
     }
 
