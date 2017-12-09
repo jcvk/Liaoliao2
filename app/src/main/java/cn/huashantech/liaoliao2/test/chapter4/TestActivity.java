@@ -7,13 +7,18 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.PixelFormat;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.view.Display;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.RemoteViews;
 import android.widget.TextView;
@@ -62,6 +67,20 @@ public class TestActivity extends Activity {
             mListContainer.addView(layout);
 
         }
+
+        Button mFloatingButton=new Button(this);
+        mFloatingButton.setText("button");
+
+        WindowManager.LayoutParams layoutParams=new WindowManager.LayoutParams(
+                ViewGroup.LayoutParams.WRAP_CONTENT, WindowManager.LayoutParams.WRAP_CONTENT, WindowManager.LayoutParams.TYPE_SYSTEM_ERROR,0, PixelFormat.TRANSPARENT
+        );
+
+        layoutParams.flags= WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE;
+        layoutParams.type= WindowManager.LayoutParams.TYPE_SYSTEM_ERROR;
+        layoutParams.gravity= Gravity.TOP;
+        layoutParams.x=100;
+        layoutParams.y=300;
+        getWindowManager().addView(mFloatingButton,layoutParams);
     }
 
     private void createList(ViewGroup layout){
