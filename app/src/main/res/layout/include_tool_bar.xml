@@ -22,7 +22,7 @@
 
 
     <TextView
-        android:text="456"
+        android:text="879"
         android:id="@+id/tv_tool_bar_subtitle"
         android:layout_alignParentRight="true"
         android:layout_marginRight="@dimen/len_8"
