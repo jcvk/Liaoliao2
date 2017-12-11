@@ -22,7 +22,7 @@ import cn.huashantech.liaoliao2.utils.CacheUtil;
 import cn.huashantech.liaoliao2.utils.LogUtil;
 import cn.huashantech.liaoliao2.utils.ToastUtil;
 import cn.huashantech.liaoliao2.view.information.InformationActivity;
-import cn.huashantech.liaoliao2.view.main.MainActivity;
+import cn.huashantech.liaoliao2.view.main.HomeActivity;
 import cn.huashantech.liaoliao2.widget.CountDownButton;
 
 /**
@@ -132,7 +132,7 @@ public class LogInActivity extends ActivityPresenter implements LogInView{
                 startActivity(intent);
                 break;
             case 1:
-                Intent intent1=new Intent(LogInActivity.this, MainActivity.class);
+                Intent intent1=new Intent(LogInActivity.this, HomeActivity.class);
                 startActivity(intent1);
                 break;
             default:

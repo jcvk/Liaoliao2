@@ -27,7 +27,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.Base">
-        <activity android:name=".view.register.LogInActivity">
+        <activity android:name=".view.main.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -35,8 +35,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".view.information.InformationActivity">
-        </activity>
-        <activity android:name=".view.main.MainActivity">
         </activity>
 
         <receiver android:name=".test.chapter5.MyAppWidgetProvider">
@@ -64,6 +62,18 @@
                 <action android:name="android.permission.RECEIVE_SMS"/>
             </intent-filter>
         </receiver>
+        
+        <!--添加FileProvider配置-->
+        <provider
+            android:authorities="cn.huashantech.liaoliao2.FileProvider"
+            android:name="android.support.v4.content.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/rc_file_path" />
+        </provider>
     </application>
+    
 
 </manifest>

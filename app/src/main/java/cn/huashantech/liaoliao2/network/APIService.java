@@ -1,5 +1,6 @@
 package cn.huashantech.liaoliao2.network;
 
+import cn.huashantech.liaoliao2.entity.vo.RefreshTokenVO;
 import cn.huashantech.liaoliao2.model.register.LoginDTO;
 import cn.huashantech.liaoliao2.entity.dto.LoginRequestDTO;
 import retrofit2.Call;
@@ -20,6 +21,9 @@ public interface APIService {
 
     @GET("api/v1.0/getVerificationCode")
     Call<Result>getVerificationCode(@Query("phoneNumber")String phoneNumber);
+
+    @POST("api/v1.0/refreshToken")
+    Call<Result<LoginDTO>> refreshToken(@Body RefreshTokenVO refreshTokenVO);
 
 
 }

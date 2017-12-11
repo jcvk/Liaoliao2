@@ -10,6 +10,10 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        //CallLib仅仅支持armeabi-v7a和x86架构CPU
+        ndk{
+            abiFilters "armeabi-v7a","x86"
+        }
     }
     buildTypes {
         release {
@@ -40,4 +44,12 @@ dependencies {
 
     //recyclerView
     compile 'com.android.support:recyclerview-v7:25.3.1'
+
+    //IMKit
+    compile project(":IMKit")
+
+    //IMLib
+    compile project(":IMLib")
+
 }
+

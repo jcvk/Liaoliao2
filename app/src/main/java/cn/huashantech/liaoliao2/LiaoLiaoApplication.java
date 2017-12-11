@@ -9,6 +9,7 @@ import java.util.List;
 
 import cn.huashantech.liaoliao2.utils.CacheUtil;
 import cn.huashantech.liaoliao2.utils.LogUtil;
+import io.rong.imkit.RongIM;
 
 /**
  * Created by Dingkang Qin on 2017/9/20.
@@ -25,6 +26,8 @@ public class LiaoLiaoApplication extends Application{
     @Override
     public void onCreate() {
         super.onCreate();
+        //初始化融云
+        RongIM.init(this);
         instance=this;
         registerActivityLifecycleCallbacks(activityLifecycleCallbacks);
     }

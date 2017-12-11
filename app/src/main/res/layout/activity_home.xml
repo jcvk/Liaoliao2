@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+
+    <include layout="@layout/include_tool_bar"
+             android:layout_width="match_parent"
+             android:layout_height="@dimen/tool_bar_height"/>
+
+    <cn.huashantech.liaoliao2.widget.FragmentIndicator
+        android:id="@+id/indicator_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    </cn.huashantech.liaoliao2.widget.FragmentIndicator>
+</LinearLayout>

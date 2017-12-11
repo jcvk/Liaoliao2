@@ -4,4 +4,8 @@
     <string name="write_right_number">请输入正确电话号码</string>
     <string name="appwidget_text">EXAMPLE</string>
     <string name="add_widget">Add widget</string>
+    <string name="recommend">推荐</string>
+    <string name="friend_news">动态</string>
+    <string name="messages">消息</string>
+    <string name="my_page">我的</string>
 </resources>
