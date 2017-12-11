@@ -12,7 +12,7 @@
         android:layout_height="25dp"/>
 
     <TextView
-        android:text="233333"
+        android:text="456"
         android:id="@+id/tv_tool_bar_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
