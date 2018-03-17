@@ -51,5 +51,8 @@ dependencies {
     //IMLib
     compile project(":IMLib")
 
+    //eventbus
+    compile 'org.greenrobot:eventbus:3.0.0'
+
 }
 

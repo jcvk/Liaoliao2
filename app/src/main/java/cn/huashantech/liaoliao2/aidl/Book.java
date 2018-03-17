@@ -4,11 +4,11 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 /**
- * Created by Dingkang Qin on 2017/11/24.
+ * Created by Dingkang Qin on 2018/3/16.
  * emails: qindingkang@huashantech.cn
  */
 
-public class Book implements Parcelable{
+public class Book implements Parcelable {
 
     public int bookId;
     public String bookName;
@@ -19,7 +19,6 @@ public class Book implements Parcelable{
     }
 
     protected Book(Parcel in) {
-
         bookId=in.readInt();
         bookName=in.readString();
     }
@@ -43,7 +42,6 @@ public class Book implements Parcelable{
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-
         dest.writeInt(bookId);
         dest.writeString(bookName);
     }

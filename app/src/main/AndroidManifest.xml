@@ -18,6 +18,9 @@
     <uses-permission android:name="android.permission.RECEIVE_SMS"/>
     <!--系统层级-->
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <!--获取服务权限-->
+    <permission android:name="cn.huashantech.liaoliao2.permission.ACCESS_BOOK_SERVICE"
+                android:protectionLevel="normal"/>
 
     <application
         android:name=".LiaoLiaoApplication"
@@ -27,15 +30,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.Base">
-        <activity android:name=".view.main.HomeActivity">
+        <activity android:name=".test.ipc.SecondActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".view.information.InformationActivity">
-        </activity>
+
+
+
+        <service android:name=".test.ipc.MyIntentService"/>
+
+        <service android:name=".test.ipc.MessageService"
+                 android:process=":remote1"/>
+
+        <service android:name=".test.ipc.BookManagerService"
+            android:process=":remote2"/>
+
+        <service android:name=".test.ipc.BinderPoolService"
+                 android:process=":fuck"/>
+
 
         <receiver android:name=".test.chapter5.MyAppWidgetProvider">
             <intent-filter>
@@ -73,6 +88,15 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/rc_file_path" />
         </provider>
+
+        <provider
+            android:authorities="cn.huashantech.liaoliao2.test.provider"
+            android:name=".test.provider.BookProvider"
+            android:permission="cn.huashantech.liaoliao2.PROVIDE"
+            android:process=":provider">
+
+        </provider>
+
     </application>
     
 

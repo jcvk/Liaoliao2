@@ -1,6 +1,8 @@
 package cn.huashantech.liaoliao2.utils;
 
 
+import android.util.TypedValue;
+
 import cn.huashantech.liaoliao2.LiaoLiaoApplication;
 
 /**
@@ -24,5 +26,9 @@ public class ScreenUtils {
 
     public static int screenWidth(){
         return LiaoLiaoApplication.getInstance().getResources().getDisplayMetrics().widthPixels;
+    }
+
+    public static int sp2px(float spValue){
+        return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP,spValue,LiaoLiaoApplication.getInstance().getResources().getDisplayMetrics());
     }
 }

@@ -1,6 +1,13 @@
 package cn.huashantech.liaoliao2.view.main;
 
+import android.app.IntentService;
+import android.content.Context;
+import android.os.AsyncTask;
+import android.os.SystemClock;
 import android.view.View;
+
+import java.util.HashMap;
+import java.util.concurrent.ThreadPoolExecutor;
 
 import cn.huashantech.liaoliao2.R;
 import cn.huashantech.liaoliao2.base.ActivityPresenter;
@@ -17,6 +24,8 @@ public class HomeActivity extends ActivityPresenter {
 
     private FragmentIndicator indicator;
 
+    private static Context sContext;
+
 
     @Override
     protected BaseContract.Presenter initPresenter() {
@@ -25,6 +34,9 @@ public class HomeActivity extends ActivityPresenter {
 
     @Override
     protected void initData() {
+
+        sContext=this;
+
 
     }
 
@@ -40,10 +52,14 @@ public class HomeActivity extends ActivityPresenter {
             }
         });
 
+        SystemClock.sleep(7*1000);
+
     }
 
     @Override
     protected int getContentLayoutId() {
         return R.layout.activity_home;
     }
+
+
 }
